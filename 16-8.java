@@ -1,3 +1,4 @@
+//PUNTO UNO
 public class ClasePrimaria {
 	public static void main(String[] args) {
 		//itera hasta 100
