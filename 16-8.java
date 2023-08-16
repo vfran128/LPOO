@@ -14,3 +14,20 @@ public class ClasePrimaria {
 	     
  }
 }
+//PUNTO DOS
+public class ClasePrimaria {
+	public static void main(String[] args) {
+		   for(int j = 50; j <= 100; j++) {
+		    	 	boolean esPrimo = true;
+		    	 	int numero = j;
+		            for (int i = 2; i <= Math.sqrt(numero); i++) {
+		            	if (numero % i == 0 ) {
+		            		esPrimo = false;
+		            		}	
+		            	}
+		            if (esPrimo == true) {
+		            	System.out.println("primo " +numero );
+		            }
+		            }
+		     }
+	}
