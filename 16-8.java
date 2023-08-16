@@ -31,3 +31,36 @@ public class ClasePrimaria {
 		            }
 		     }
 	}
+//PUNTO TRES 
+import java.util.Scanner;
+
+public class ClasePrimaria {
+	public static void main(String[] args) {
+		boolean programa = true;
+		while (programa == true) {
+			
+		Scanner scanner = new 	Scanner(System.in);
+		
+		System.out.print("Ingresa un número entero: ");
+		//verifica que sea un numero
+        if(scanner.hasNextInt()) {
+        	int numeroEntero = scanner.nextInt();
+        	if (numeroEntero >100) {
+        		programa = false;
+        		break;
+        	}
+        	System.out.println("Número entero ingresado: " + numeroEntero);
+        }
+        //Aviso si no se ingreso un numero o tipo de dato valido
+        else {
+        	System.out.println("Tipo de dato INCORRECTO");
+        	scanner.close();
+        }
+        
+		}
+	
+		System.out.println("CERRANDO PROGRAMA");
+		return;
+	 }
+	}
+//PUNTO CUATRO
