@@ -139,3 +139,19 @@ public class ClasePrimaria {
 }
 	        
 	
+//PUNTO CINCO
+public class ClasePrimaria {
+	public static void main(String[] args) {
+	// se quiere encontrar el numero mayor de un array de enteros
+		int[] array = {1,2,4,6,9,10,99};
+		int mayor = 0;
+		for (int numero : array) {		
+			if (numero > mayor) {
+				mayor = numero;
+			}
+			
+		}
+		System.out.println(mayor);
+	}
+}
+	
