@@ -64,3 +64,78 @@ public class ClasePrimaria {
 	 }
 	}
 //PUNTO CUATRO
+import java.util.Scanner;
+
+public class ClasePrimaria {
+	public static void main(String[] args) {
+		boolean programa = true;
+		Scanner scanner = new 	Scanner(System.in);
+		while (programa == true) {
+			
+			System.out.println("¿Que quiere hacer? \n1)Sumar \n2)Restar \n3)Multiplicar \n4)Dividir \n5)Salir");
+			
+			if(scanner.hasNextInt()) {
+	        	int numeroEntero = scanner.nextInt();
+	        	switch (numeroEntero) {
+	        	//cada variaable tendra la inicial de su operacion al final
+	        	default:
+	        		System.out.println("Seleccion Invalida");
+	        		break;
+	        	case 1: 
+	        		System.out.println("Elija dos numeros para sumar");
+	        		int numeroXs = scanner.nextInt();
+	        		int numeroYs= scanner.nextInt();
+	        		int resultados = numeroXs + numeroYs;
+	        		System.out.println(numeroXs + "+" + numeroYs + "=" + resultados );
+	        		break;
+	        	case 2: 
+	        		//el programa cammbiara el orden de algunos numeros para parcerse mas a una calculadora no cientifica
+	        		System.out.println("Elija dos numeros para restar, el programa es incapas de dar negativo");
+	        		int numeroXn = scanner.nextInt();
+	        		int numeroYn = scanner.nextInt();
+	        		int resultadon = 0;
+	        		if (numeroXn < numeroYn) {
+	        			resultadon = numeroYn - numeroXn;
+	        			System.out.println(numeroYn + "-" + numeroXn + "=" + resultadon );
+	        		}
+	        		else {
+	        			resultadon = numeroXn - numeroYn;
+	        			System.out.println(numeroXn + "-" + numeroYn + "=" + resultadon );
+	        		}
+	        		
+	        		break;
+	        	case 3: 
+	        		System.out.println("Elija dos numeros para multiplicar");
+	        		int numeroXm = scanner.nextInt();
+	        		int numeroYm = scanner.nextInt();
+	        		int resultadom = numeroXm * numeroYm;
+	        		System.out.println(numeroXm + "*" + numeroYm + "=" + resultadom );
+	        		break;
+	        	case 4: 
+	        		System.out.println("Elija dos numeros para dividir, el programa es incapas de dar con conma");
+	        		int numeroXd = scanner.nextInt();
+	        		int numeroYd = scanner.nextInt();
+	        		int resultadod = 0;
+	        		if (numeroXd < numeroYd && numeroYd % numeroXd == 0) {
+	        			resultadod = numeroYd / numeroXd;
+	        			System.out.println(numeroYd + "/" + numeroXd + "=" + resultadod );
+	        		}
+	        		else if (numeroXd > numeroYd && numeroXd % numeroYd == 0) {
+	        			resultadod = numeroXd / numeroYd;
+	        			System.out.println(numeroXd + "/" + numeroYd + "=" + resultadod );
+	        		}
+	        		else {
+	        			System.out.println("Division Invalida");
+	        		}
+	        		break;
+	        	case 5: 
+	        		return;
+	        	 
+	        	}
+			}
+		}
+		scanner.close();
+	}
+}
+	        
+	
